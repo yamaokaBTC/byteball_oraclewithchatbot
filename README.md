@@ -15,8 +15,11 @@ After pairing,
 Please follow the instructions on the screen  
 
 ## Attention
-Since error countermeasures etc. are not implemented,  
-Please note that writing failure etc. are not detected.  
+Writing to DAG requires Bytes.
+It is recommended to use it on the test net.
+http://byteball.memo.wiki/d/%A5%C6%A5%B9%A5%C8%A5%CD%A5%C3%A5%C8%A4%C7%C6%B0%A4%AB%A4%B9%B3%AB%C8%AF%B4%C4%B6%AD%A4%F2%BA%EE%A4%EB 
+Since error countermeasures etc. are not implemented,   
+Please note that writing failure etc. are not detected.  
 
 ***
 
@@ -38,5 +41,8 @@ http://byteball.memo.wiki/d/%B3%AB%C8%AF%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB
 
 
 ### 注意
-エラーコードなどは実装していないため、  
+DAGへの書き込みはBytesが必要です。
+テストネット上での利用を推奨します。
+http://byteball.memo.wiki/d/%A5%C6%A5%B9%A5%C8%A5%CD%A5%C3%A5%C8%A4%C7%C6%B0%A4%AB%A4%B9%B3%AB%C8%AF%B4%C4%B6%AD%A4%F2%BA%EE%A4%EB  
+エラーコードなどは実装していないため、
 書き込みの失敗などは検知しませんので注意してください。
