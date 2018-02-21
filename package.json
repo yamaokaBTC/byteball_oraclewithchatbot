@@ -1,0 +1,19 @@
+{
+  "name": "bbtest2",
+  "version": "1.0.0",
+  "description": "1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitcore-lib": "^0.13.14",
+    "bitcore-mnemonic": "~1.0.0",
+    "byteballcore": "git+https://github.com/byteball/byteballcore.git",
+    "headless-byteball": "git+https://github.com/byteball/headless-byteball.git",
+    "json-rpc2": "^1.0.2",
+    "sqlite3": "^3.1.13"
+  }
+}
