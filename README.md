@@ -4,7 +4,7 @@ It is a sample that performs a simple Oracle operation using a chat bot.
 
 ## Set up
 For information on environment construction, please click here. (Japanese Page) 
-byteball.memo.wiki/d/%B3%AB%C8%AF%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB
+http://byteball.memo.wiki/d/%B3%AB%C8%AF%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB
 
 and run this command.
 > npm install
@@ -26,7 +26,7 @@ Please note that writing failure etc. are not detected.
 
 ## セットアップ
 環境構築についてはこちらをご覧ください。  
-byteball.memo.wiki/d/%B3%AB%C8%AF%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB
+http://byteball.memo.wiki/d/%B3%AB%C8%AF%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB
 
 以下コマンドを実行  
 > npm install
