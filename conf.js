@@ -15,9 +15,7 @@ exports.deviceName = 'Headless';
 exports.admin_email='hoge@mail.com';
 exports.from_email='hoge@ mail.com';
 exports.bSingleAddress = true;
-//ランダムな文字列。ペアリングコードの一部になる
 exports.permanent_pairing_secret = '0000';
-//チャットを許可するデバイスのアドレスを設定
 exports.control_addresses = [''];
 exports.payout_address = 'WHERE THE MONEY CAN BE SENT TO';
 exports.KEYS_FILENAME = 'keys.json';
