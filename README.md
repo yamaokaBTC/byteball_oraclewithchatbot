@@ -3,7 +3,7 @@
 It is a sample that performs a simple Oracle operation using a chat bot.  
 
 ## Set up
-For information on environment construction, please click here.  
+For information on environment construction, please click here. (Japanese Page) 
 byteball.memo.wiki/d/%B3%AB%C8%AF%B4%C4%B6%AD%A4%CE%B9%BD%C3%DB
 
 and run this command.
@@ -15,6 +15,8 @@ After pairing,
 Please follow the instructions on the screen  
 
 ## Attention
+Since error countermeasures etc. are not implemented,  
+Please note that writing failure etc. are not detected.  
 
 ***
 
