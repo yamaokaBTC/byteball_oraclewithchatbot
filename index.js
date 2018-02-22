@@ -210,12 +210,12 @@ function readExistingData(feed_name, handleResult) {
 			case 'add':
 				feedname = command;
 				state = 'add_data';
-				device.sendMessageToDevice(from_address, 'text', "追加したいデータの内容を入力してください。");
+				device.sendMessageToDevice(from_address, 'text', "Please enter the content of the data you want to add.\n追加したいデータの内容を入力してください。");
 				return;
 			case 'add_data':
 				feedvalue = command;
 				state = '';
-				device.sendMessageToDevice(from_address, 'text',"feedname:"+feedname+"\nfeedvalue:"+feedvalue+"\nをDAGに書き込んでいます。\nしばらくすると反映されます。");
+				device.sendMessageToDevice(from_address, 'text',"Writing... feedname:"+feedname+"\n" + "feedvalue:"+feedvalue+"\n" + "feedname:"+feedname+"\nfeedvalue:"+feedvalue+"\nをDAGに書き込んでいます。\nしばらくすると反映されます。");
 
 				var datafeed = {};
 				var key = feedname;
@@ -224,11 +224,11 @@ function readExistingData(feed_name, handleResult) {
 
 				return;
 			case 'search_feedname':
-				device.sendMessageToDevice(from_address, 'text', "feednameから検索中・・・");
+				device.sendMessageToDevice(from_address, 'text', "Searching from feedname \n feednameから検索中・・・");
 				searchdatafeedname(device,from_address,command);
 				return;
 			case 'search_feedvalue':
-				device.sendMessageToDevice(from_address, 'text', "feedvalueから検索中・・・");
+				device.sendMessageToDevice(from_address, 'text', "Searching from feedvalue \n feedvalueから検索中・・・");
 				searchdatafeedvalue(device,from_address,command);
 				return;
 		}
@@ -244,15 +244,15 @@ function readExistingData(feed_name, handleResult) {
 				break;
 			case 'add':
 				state = 'add';
-				device.sendMessageToDevice(from_address, 'text', "追加したいデータのタイトルを入力してください。");
+				device.sendMessageToDevice(from_address, 'text', "Data not found\n追加したいデータのタイトルを入力してください。");
 				break;
 			case 'search_feedname':
 				state = 'search_feedname';
-				device.sendMessageToDevice(from_address, 'text', "検索したいデータのfeednameを入力してください。");
+				device.sendMessageToDevice(from_address, 'text', "Please enter feedname you want to search.\n検索したいデータのfeednameを入力してください。");
 				break;
 			case 'search_feedvalue':
 				state = 'search_feedvalue';
-				device.sendMessageToDevice(from_address, 'text', "検索したいデータのfeedvalueを入力してください。");
+				device.sendMessageToDevice(from_address, 'text', "Please enter feedvalue you want to search.\n検索したいデータのfeedvalueを入力してください。");
 				break;
 				//search_all
 			case 'search_all':
@@ -284,7 +284,7 @@ function readExistingData(feed_name, handleResult) {
 			WHERE address=? AND feed_name LIKE ?", [my_address,search_feed_name],
 			function(rows) {
 				if (rows.length === 0){
-					device.sendMessageToDevice(from_address, 'text', "データは見つかりませんでした。");
+					device.sendMessageToDevice(from_address, 'text', "Data not found\nデータは見つかりませんでした。");
 				}
 				else{
 					var messeage = "以下のデータが見つかりました。";
@@ -307,14 +307,14 @@ function readExistingData(feed_name, handleResult) {
 			WHERE address=? AND value LIKE ?", [my_address,search_feed_value],
 			function(rows) {
 				if (rows.length === 0){
-					device.sendMessageToDevice(from_address, 'text', "データは見つかりませんでした。");
+					device.sendMessageToDevice(from_address, 'text', "Data not found\nデータは見つかりませんでした。");
 				}
 				else{
 					var messeage = "以下のデータが見つかりました。";
 					for(var i = 0;i<rows.length;i++){
 						messeage += "\n\nfeedname:" + rows[i].feed_name + "\n" + "feedvalue:"+ rows[i].value;
 					}
-					device.sendMessageToDevice(from_address, 'text', "以下のデータが見つかりました。\n" + "feedname:" + rows[0].feed_name + "\n" + "feedvalue:"+ rows[0].value);
+					device.sendMessageToDevice(from_address, 'text', "Result\n以下のデータが見つかりました。\n" + "feedname:" + rows[0].feed_name + "\n" + "feedvalue:"+ rows[0].value);
 				}
 				state = 'menu';
 			}
@@ -329,7 +329,7 @@ function readExistingData(feed_name, handleResult) {
 			WHERE address=?", [my_address],
 			function(rows) {
 				if (rows.length === 0){
-					device.sendMessageToDevice(from_address, 'text', "データは見つかりませんでした。");
+					device.sendMessageToDevice(from_address, 'text', "Data not found\nデータは見つかりませんでした。");
 				}
 				else{
 					var messeage = "以下のデータが見つかりました。";
