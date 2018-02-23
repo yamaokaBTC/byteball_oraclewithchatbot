@@ -215,7 +215,7 @@ function readExistingData(feed_name, handleResult) {
 			case 'add_data':
 				feedvalue = command;
 				state = '';
-				device.sendMessageToDevice(from_address, 'text',"Writing... feedname:"+feedname+"\n" + "feedvalue:"+feedvalue+"\n" + "feedname:"+feedname+"\nfeedvalue:"+feedvalue+"\nをDAGに書き込んでいます。\nしばらくすると反映されます。");
+				device.sendMessageToDevice(from_address, 'text',"Writing... feedname:"+ "feedname:"+feedname+"\nfeedvalue:"+feedvalue+"\n Writing...It will be reflected in a while.\n DAGに書き込んでいます。しばらくすると反映されます。");
 
 				var datafeed = {};
 				var key = feedname;
@@ -244,7 +244,7 @@ function readExistingData(feed_name, handleResult) {
 				break;
 			case 'add':
 				state = 'add';
-				device.sendMessageToDevice(from_address, 'text', "Data not found\n追加したいデータのタイトルを入力してください。");
+				device.sendMessageToDevice(from_address, 'text', "Please enter the title of the data you want to add.\n追加したいデータのタイトルを入力してください。");
 				break;
 			case 'search_feedname':
 				state = 'search_feedname';
