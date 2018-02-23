@@ -101,7 +101,6 @@ function createOptimalOutputs(handleOutputs) {
 					amount: Math.round(amount / 2),
 					address: my_address
 				});
-				console.log('--------------GOTO handleOutputs--------------');
 				console.log(arrOutputs);
 				handleOutputs(arrOutputs);
 			}
