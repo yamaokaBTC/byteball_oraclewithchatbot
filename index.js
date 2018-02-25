@@ -358,6 +358,7 @@ eventBus.on('text', function(from_address, text){
 	});
 
 	eventBus.on('paired', function(from_address){
+		var device = require('byteballcore/device.js');
 		console.log('paired '+from_address);
 		device.sendMessageToDevice(from_address, 'text',welcometext);
 	});
